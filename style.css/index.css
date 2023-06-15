@@ -18,6 +18,7 @@ nav {
   background-color: #151515;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 12px 40px;
   font-family: "Darker Grotesque", sans-serif;
   font-weight: 500;
@@ -30,7 +31,7 @@ nav {
   gap: 10px;
 }
 
-#logo > img {
+#logo img {
   width: 50px;
   height: 50px;
 }
@@ -41,12 +42,16 @@ nav {
   justify-content: space-between;
 }
 
-#links > a {
+#links a {
   text-decoration: none;
   color: white;
 }
 
-#links > button {
+#links a:nth-child(1):hover {
+  border-bottom: 1px solid white;
+}
+
+#links button {
   color: #151515;
   background-color: white;
   font-size: 18px;
@@ -56,10 +61,11 @@ nav {
   border: none;
 }
 
-#links > button:hover {
+#links button:hover {
   color: white;
   background-color: #af9fff;
   cursor: pointer;
+  text-decoration: none;
 }
 /* end of nav bar */
 
@@ -287,7 +293,7 @@ footer > #contact > p > a {
   transition: border-bottom 0.3s ease;
 }
 
-a:hover {
+footer a:hover {
   border-bottom: 1px solid white;
 }
 

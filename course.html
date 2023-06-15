@@ -17,15 +17,18 @@
     <!-- nav bar -->
     <nav>
       <div id="logo">
-        <img
-          src="./images/u2cw_blacklogo_noName.png"
-          alt="modern school logo"
-        />
+        <a href="./index.html">
+          <img
+            src="./images/u2cw_blacklogo_noName.png"
+            alt="modern school logo"
+          />
+        </a>
         <p>MODERN SCHOOL</p>
       </div>
 
       <div id="search-box">
         <button>🔍</button>
+        <!-- <i class="fa-solid fa-magnifying-glass" style="color: #b4bac5"></i> -->
         <input type="text" placeholder="Search for anything" />
       </div>
 
@@ -36,5 +39,54 @@
       </div>
     </nav>
     <!-- end of nav bar -->
+
+    <!-- course title -->
+    <h2 id="title">Courses to get you <span>started</span></h2>
+    <!-- end of course title -->
+
+    <!-- filter component -->
+    <div id="filter">
+      <select class="custom-select" name="" id="filter-by-course">
+        <option value="">Filter by Course</option>
+        <option value="Artificial Intelligence">Artificial Intelligence</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Finance">Finance</option>
+      </select>
+
+      <select class="custom-select" name="" id="sort-by-price">
+        <option value="">Sort by Price</option>
+        <option value="htl">High to Low</option>
+        <option value="lth">Low to High</option>
+      </select>
+    </div>
+    <!-- end of filter component -->
+
+    <!-- courses grid -->
+    <div id="course-wrapper"></div>
+    <!-- end of courses grid -->
+
+    <!-- footer -->
+    <footer>
+      <div id="contact">
+        <p>Got any questions? <a href="#">Contact Us</a></p>
+      </div>
+      <div id="extra">
+        <div id="logo">
+          <i class="fa-brands fa-instagram" style="color: #ffffff"></i>
+          <i class="fa-brands fa-tiktok" style="color: #ffffff"></i>
+          <i class="fa-brands fa-youtube" style="color: #ffffff"></i>
+        </div>
+        <div id="terms">
+          <p>© 2023</p>
+          <p>Privacy Policy</p>
+          <p>Terms & Conditions</p>
+        </div>
+        <div id="developer">
+          <p>Designed & Developed by <span> Ajeet P</span></p>
+        </div>
+      </div>
+    </footer>
+    <!-- end of footer -->
+    <script type="module" src="./scripts/course.js"></script>
   </body>
 </html>
