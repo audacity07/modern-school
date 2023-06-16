@@ -7,6 +7,7 @@ const sortByPrice = document.querySelector("#sort-by-price");
 let cartItemArr = JSON.parse(localStorage.getItem("cartItem")) || [];
 let searchEle = document.querySelector("#search-box > input");
 let titleTag = document.querySelector("#title");
+let inCart = JSON.parse(localStorage.getItem("inCart")) || {};
 
 searchEle.addEventListener("input", function () {
   let filtered = dataArr.filter(function (element) {
@@ -80,7 +81,13 @@ function displayData(data) {
     createdByElement.textContent = ele.created_by;
     ratingElement.textContent = ele.ratings;
     priceElement.textContent = ele.price[0];
-    addButton.textContent = "Add to Cart";
+    if (ele.id in inCart) {
+      addButton.textContent = "Added to Cart";
+      addButton.setAttribute("class", "added-button");
+    } else {
+      addButton.textContent = "Add to Cart";
+    }
+
     addButton.addEventListener("click", function () {
       addItem(ele, ind);
     });
@@ -112,6 +119,11 @@ function displayData(data) {
 displayData(dataArr);
 
 function addItem(ele, ind) {
+  // to handle add to cart button
+  inCart[ele.id] = true;
+  localStorage.setItem("inCart", JSON.stringify(inCart));
+
+  // cartItems array
   for (let val of cartItemArr) {
     if (val.id === ele.id) {
       alert("Item already added !");
@@ -121,4 +133,5 @@ function addItem(ele, ind) {
   ele.count = 1;
   cartItemArr.push(ele);
   localStorage.setItem("cartItem", JSON.stringify(cartItemArr));
+  displayData(dataArr);
 }

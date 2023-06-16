@@ -10,8 +10,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style.css/course.css" />
-    <title>Modern School - Course</title>
+    <link rel="stylesheet" href="./style.css/cart.css" />
+    <title>Modern School - Cart Page</title>
   </head>
   <body>
     <!-- nav bar -->
@@ -23,47 +23,27 @@
             alt="modern school logo"
           />
         </a>
+
         <p>MODERN SCHOOL</p>
       </div>
 
-      <div id="search-box">
-        <button>🔍</button>
-        <!-- <i class="fa-solid fa-magnifying-glass" style="color: #b4bac5"></i> -->
-        <input type="text" placeholder="Search for anything" />
-      </div>
-
       <div id="links">
-        <a href="./cart.html">Cart</a>
-        <button>Login</button>
-        <button>Sign up</button>
+        <a href="./course.html">Course</a>
+        <a href="./course.html">
+          <button>Apply Now</button>
+        </a>
       </div>
     </nav>
     <!-- end of nav bar -->
 
     <!-- course title -->
-    <h2 id="title">Courses to get you <span>started</span></h2>
+    <!-- <h2 id="title">Shopping <span>Cart</span></h2> -->
+    <h2 id="title"></h2>
     <!-- end of course title -->
 
-    <!-- filter component -->
-    <div id="filter">
-      <select class="custom-select" name="" id="filter-by-course">
-        <option value="">Filter by Course</option>
-        <option value="Artificial Intelligence">Artificial Intelligence</option>
-        <option value="Web Development">Web Development</option>
-        <option value="Finance">Finance</option>
-      </select>
-
-      <select class="custom-select" name="" id="sort-by-price">
-        <option value="">Sort by Price</option>
-        <option value="htl">High to Low</option>
-        <option value="lth">Low to High</option>
-      </select>
-    </div>
-    <!-- end of filter component -->
-
-    <!-- courses grid -->
-    <div id="course-wrapper"></div>
-    <!-- end of courses grid -->
+    <!-- cart item container -->
+    <div id="cart-item-container"></div>
+    <!-- end of cart item container -->
 
     <!-- footer -->
     <footer>
@@ -87,6 +67,7 @@
       </div>
     </footer>
     <!-- end of footer -->
-    <script type="module" src="./scripts/course.js"></script>
+
+    <script src="./scripts/cart.js"></script>
   </body>
 </html>

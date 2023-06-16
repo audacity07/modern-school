@@ -10,6 +10,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./style.css/index.css" />
     <title>Modern School - Home</title>
   </head>
@@ -29,6 +30,7 @@
 
       <div id="links">
         <a href="./course.html">Course</a>
+        <a href="./cart.html">Cart</a>
         <a href="./course.html">
           <button>Apply Now</button>
         </a>
@@ -115,12 +117,18 @@
     <!-- Large mid section -->
     <div id="mid-section">
       <div class="wrapper">
-        <div>
+        <!-- <div>
           <h2>Interactive</h2>
         </div>
+
         <div>
           <h2>Online</h2>
-        </div>
+        </div> -->
+
+        <h2>Interactive</h2>
+
+        <h2>Online</h2>
+
         <div>
           <h2>Less</h2>
           <img id="gif1" src="./images/mid_section_gif1.gif" alt="" />
@@ -170,7 +178,7 @@
           </p>
           <p>Dylan</p>
         </div>
-        <div class="cards">
+        <div class="cards" data-aos="fade-up" data-aos-duration="10000">
           <div>
             <img src="./images/review_pic4.jpg" alt="" />
           </div>
@@ -209,5 +217,9 @@
     </footer>
     <!-- end of footer -->
     <script src="./scripts/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
