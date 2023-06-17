@@ -24,7 +24,7 @@ nav {
   font-weight: 500;
   font-size: 30px;
   z-index: 3;
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
 }
 
 #logo {
@@ -253,6 +253,7 @@ footer {
 }
 
 footer > #contact {
+  display: flex;
   margin: 20px 0 ;
   text-decoration: none;
 }
@@ -270,6 +271,7 @@ footer a:hover {
 footer > #extra {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 footer > #extra * {
@@ -297,3 +299,246 @@ footer #developer span{
   margin-left: 3px;
 }
 /* end of footer */
+
+/* Media Queries */
+
+@media only screen and (max-width: 1132px) {
+  .card {
+    width: 80%;
+  }
+  .totalCard {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    width: 90%;
+  }
+  .totalCard {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  footer > #contact {
+    justify-content: center;
+  }
+  footer > #extra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    /* flex-wrap: wrap; */
+  }
+  footer #extra #logo {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  footer #terms {
+    justify-content: center;
+    gap: 50px;
+  }
+
+  footer #developer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 886px) {
+  .info * {
+    margin-top: 4px;
+  }
+  
+  .info h3 {
+    font-size: 23px;
+  }
+  
+  .info p {
+    font-size: 13px;
+  }
+
+  .info .rate {
+    font-size: 17px;
+  }
+
+  .btn button {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .summary {
+    font-size: 25px;
+  }
+
+  .totalBtn  button {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+
+@media only screen and (max-width: 838px) {
+  nav {
+    font-size: 25px;
+  }
+
+  nav p {
+    display: none;
+  }
+
+  #links {
+    justify-content: space-around;
+    width: 70%;
+  }
+
+  #links button {
+    padding: 8px;
+  }
+}
+
+@media only screen and (max-width: 718px) {
+  #cart-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 42%;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    grid-template-areas: 
+    "img img"
+    "info info"
+    "btn amt";
+    gap: 10px; 
+    padding: 20px;
+    margin: 0px;
+    margin-top: 20px;
+
+  }
+
+  .btn {
+    grid-area: btn;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .summary {
+    font-size: 23px;
+    justify-content: center;
+  }
+
+  .totalCard {
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "sum sum"
+    "btn amt";
+    margin: 0;
+    margin-top: 20px;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .totalBtn {
+    justify-content: right;
+  }
+
+  .price {
+    justify-content: left;
+  }
+
+  .totalBtn button {
+    font-size: 16px;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 638px) {
+  .card {
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  nav {
+    font-size: 25px;
+  }
+
+  #links {
+    width: 80%;
+  }
+
+  #links button {
+    padding: 7px;
+  }
+
+  .card {
+    width: 55%;
+  }
+
+  footer {
+    padding: 5px 10px;
+  }
+
+  footer > #contact {
+    margin: 0;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  footer > #extra {
+    gap: 10px;
+    /* flex-wrap: wrap; */
+  }
+  footer #extra #logo {
+    gap: 40px;
+  }
+
+  footer #terms {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  footer #developer {
+    justify-content: center;
+  }
+
+}
+
+@media only screen and (max-width: 406px) {
+  #links {
+    justify-content: space-between;
+    width: 70%;
+  }
+  .card {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 356px) {
+  nav {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  #links {
+    justify-content: space-around;
+    width: 75%;
+    font-size: 25px;
+  }
+  #links button {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  .card {
+    width: 80%;
+  }
+}

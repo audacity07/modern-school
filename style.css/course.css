@@ -239,6 +239,7 @@ footer {
 }
 
 footer > #contact {
+  display: flex;
   margin: 20px 0 ;
   text-decoration: none;
 }
@@ -256,6 +257,7 @@ footer a:hover {
 footer > #extra {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 footer > #extra * {
@@ -283,3 +285,208 @@ footer #developer span{
   margin-left: 3px;
 }
 /* end of footer */
+
+/* --------------------------------------- */
+
+/* Media Queries */
+
+@media only screen and (max-width: 1204px) {
+  nav p {
+    display: none;
+  }
+
+  nav > #search-box {
+    width: 45%;
+  }
+
+  #links > button {
+    padding: 9px;
+  }
+
+  #course-grid {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  #course-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  footer > #contact {
+    justify-content: center;
+  }
+
+  footer > #extra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    /* flex-wrap: wrap; */
+  }
+  footer #extra #logo {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  footer #terms {
+    justify-content: center;
+    gap: 50px;
+  }
+
+  footer #developer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  nav {
+    font-size: 25px;
+  }
+
+  nav > #search-box {
+    width: 50%;
+  }
+
+  #links {
+    width: 35%;
+  }
+
+  #links > button {
+    padding: 8px;
+  }
+
+  #course-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 63%;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  #course-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 728px) {
+  nav {
+    font-size: 20px;
+    justify-content: space-around;
+  }
+  
+  nav > #search-box {
+    width: 60%;
+  }
+
+  #links {
+    display: none;
+  }
+
+  #links > button {
+    padding: 8px;
+  }
+
+  #course-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  #title {
+    font-size: 40px;
+  }
+
+  #course-grid {
+    grid-template-columns: repeat(1, 1fr);
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  nav > #search-box {
+    width: 70%;
+  }
+
+  nav #search-box input {
+    width: 70%;
+  }
+
+  footer {
+    padding: 5px 10px;
+  }
+
+  footer > #contact {
+    margin: 0;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  footer > #extra {
+    gap: 10px;
+    /* flex-wrap: wrap; */
+  }
+  footer #extra #logo {
+    gap: 40px;
+  }
+
+  footer #terms {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  footer #developer {
+    justify-content: center;
+  }
+
+}
+
+@media only screen and (max-width: 499px) {
+
+  #course-grid {
+    grid-template-columns: repeat(1, 1fr);
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  nav > #search-box {
+    width: 80%;
+    margin-left: 10px;
+  }
+
+  nav #search-box input {
+    width: 70%;
+  }
+
+  #filter {
+    gap: 10px;
+    font-size: 17px;
+  }
+  
+  .custom-select {
+    padding: 10px;
+  }
+  
+  .custom-select option {
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  #course-grid {
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+}
