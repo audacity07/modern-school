@@ -102,6 +102,102 @@ nav #search-box input {
   cursor: pointer;
 }
 
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  display: none;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  background-color: white;
+  width: 30px;
+  height: 4px;
+  border-radius: 10px;
+}
+
+.animateBar1 {
+  animation: flipBar1 0.4s;
+  /* this is used to hold the last state */
+  /* and not revert bakc to the original state */
+  animation-fill-mode: forwards;
+}
+
+.animateBar2 {
+  animation: fadeBar2 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.animateBar3 {
+  animation: flipBar3 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flipBar1 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(45deg) translate(3px, 10px);
+  }
+}
+
+@keyframes fadeBar2 {
+  from {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes flipBar3 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-45deg) translate(3px, -10px);
+  }
+}
+
+.mobileNav {
+  width: 140px;
+  background-color: #151515;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -160px;
+  /* right: 0; */
+  transition: transform 0.3s;
+}
+
+.openDrawer {
+  transform: translateX(-160px);
+}
+
+.mobileNav a {
+  text-decoration: none;
+  color: white;
+  margin: 16px 0;
+  font-size: 21px;
+}
+
+.mobileNav a:hover {
+  border-bottom: 1px solid white;
+}
+
 /* end of nav bar */
 
 /* course title */
@@ -220,6 +316,15 @@ nav #search-box input {
   font-weight: bold;
   font-size: 20px;
   color: #b4690e;
+  margin-right: 2px;
+}
+
+#rate i:nth-child(1) {
+  margin-left: 5px;
+}
+
+#rate i {
+  margin-left: 1px;
 }
 
 .fa-solid.fa-star, .fa-solid.fa-star-half-stroke {
@@ -377,7 +482,7 @@ footer #developer span{
 @media only screen and (max-width: 728px) {
   nav {
     font-size: 20px;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   
   nav > #search-box {
@@ -390,6 +495,11 @@ footer #developer span{
 
   #links > button {
     padding: 8px;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: 10px;
   }
 
   #course-grid {
@@ -410,12 +520,21 @@ footer #developer span{
 }
 
 @media only screen and (max-width: 550px) {
+  nav {
+    justify-content: space-between;
+    padding: 8px;
+  }
+
   nav > #search-box {
-    width: 70%;
+    width: 60%;
   }
 
   nav #search-box input {
-    width: 70%;
+    width: 65%;
+  }
+
+  .mobileNav {
+    width: 120px;
   }
 
   footer {
@@ -450,7 +569,6 @@ footer #developer span{
 }
 
 @media only screen and (max-width: 499px) {
-
   #course-grid {
     grid-template-columns: repeat(1, 1fr);
     width: 65%;
@@ -463,12 +581,16 @@ footer #developer span{
   }
 
   nav > #search-box {
-    width: 80%;
+    width: 65%;
     margin-left: 10px;
   }
 
   nav #search-box input {
-    width: 70%;
+    width: 60%;
+  }
+
+  .mobileNav {
+    width: 110px;
   }
 
   #filter {
