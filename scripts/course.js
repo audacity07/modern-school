@@ -71,7 +71,6 @@ function displayData(data) {
     const imgElement = document.createElement("img");
     const courseTitleElement = document.createElement("h2");
     const createdByElement = document.createElement("p");
-    const ratingElement = document.createElement("p");
     const priceElement = document.createElement("p");
     const addButton = document.createElement("button");
 
@@ -79,7 +78,6 @@ function displayData(data) {
     imgElement.src = ele.image;
     courseTitleElement.textContent = ele.title;
     createdByElement.textContent = ele.created_by;
-    ratingElement.textContent = ele.ratings;
     priceElement.textContent = ele.price[0];
     if (ele.id in inCart) {
       addButton.textContent = "Added to Cart";
@@ -95,14 +93,25 @@ function displayData(data) {
     // Set the necessary classes and IDs for the elements
     courseGridDiv.id = "course-grid";
     cardDiv.className = "card";
-    ratingElement.className = "rating";
-    ratingElement.id = "rate";
 
-    // const ratingStars = parseFloat(ele.ratings);
-    const starsHtml =
-      '<i class="fa-solid fa-star" style="color: #ffd500"></i>'.repeat(4) +
-      '<i class="fa-solid fa-star-half-stroke" style="color: #ffd500"></i>';
-    ratingElement.innerHTML = `${ele.ratings} ${starsHtml}`;
+    // Create a p element for the course rating
+    const ratingElement = document.createElement("p");
+    ratingElement.setAttribute("class", "rating");
+    ratingElement.setAttribute("id", "rate");
+    ratingElement.textContent = ele.ratings;
+
+    // Create the star icons based on the rating
+    for (let i = 0; i < 5; i++) {
+      const star = document.createElement("i");
+      if (i < Math.floor(ele.ratings)) {
+        star.setAttribute("class", "fa-solid fa-star");
+        star.style.color = "#ffd500";
+      } else if (i < ele.ratings) {
+        star.setAttribute("class", "fa-solid fa-star-half-stroke");
+        star.style.color = "#ffd500";
+      }
+      ratingElement.appendChild(star);
+    }
 
     imgDiv.appendChild(imgElement);
     cardDiv.appendChild(imgDiv);
@@ -135,3 +144,26 @@ function addItem(ele, ind) {
   localStorage.setItem("cartItem", JSON.stringify(cartItemArr));
   displayData(dataArr);
 }
+
+// to handle mobile navigation
+const hamburger = document.querySelector(".hamburger");
+const bar1 = document.querySelector(".bar1");
+const bar2 = document.querySelector(".bar2");
+const bar3 = document.querySelector(".bar3");
+const mobileNav = document.querySelector(".mobileNav");
+
+hamburger.addEventListener("click", function () {
+  bar1.classList.toggle("animateBar1");
+  bar2.classList.toggle("animateBar2");
+  bar3.classList.toggle("animateBar3");
+  mobileNav.classList.toggle("openDrawer");
+});
+
+window.addEventListener("resize", function () {
+  let inputElement = document.getElementById("myInput");
+  if (window.innerWidth <= 499) {
+    inputElement.setAttribute("placeholder", "Search");
+  } else {
+    inputElement.setAttribute("placeholder", "Search for courses");
+  }
+});

@@ -12,7 +12,10 @@ function displayData(data) {
   } else {
     title.innerHTML = `Your Cart is <span>empty</span>`;
   }
+
   cartItemContainer.innerHTML = null;
+
+  displayTotal();
 
   data.forEach(function (ele, ind) {
     // Create a new div element for the card
@@ -87,8 +90,6 @@ function displayData(data) {
     card.appendChild(price);
     cartItemContainer.appendChild(card);
   });
-
-  displayTotal();
 }
 displayData(cart);
 

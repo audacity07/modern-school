@@ -10,6 +10,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="./images/u2cw_blacklogo_noName.png"
+    />
     <link rel="stylesheet" href="./style.css/course.css" />
     <title>Modern School - Course</title>
   </head>
@@ -29,7 +34,7 @@
       <div id="search-box">
         <button>🔍</button>
         <!-- <i class="fa-solid fa-magnifying-glass" style="color: #b4bac5"></i> -->
-        <input type="text" placeholder="Search for anything" />
+        <input id="myInput" type="text" placeholder="Search for courses" />
       </div>
 
       <div id="links">
@@ -37,8 +42,22 @@
         <button>Login</button>
         <button>Sign up</button>
       </div>
+
+      <div class="hamburger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
     </nav>
     <!-- end of nav bar -->
+
+    <!-- mobile navbar -->
+    <nav class="mobileNav">
+      <a href="./cart.html">Cart</a>
+      <a href="#">Login</a>
+      <a href="#">Sign up</a>
+    </nav>
+    <!-- end of mobile navbar -->
 
     <!-- course title -->
     <h2 id="title">Courses to get you <span>started</span></h2>
