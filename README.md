@@ -34,3 +34,26 @@ By providing a flexible fee structure, the Modern School Website empowers studen
 ```
 https://github.com/audacity07/screeching-wax-837.git
 ```
+
+| `Project Highlights` |
+| :------------------: |
+
+ <div align = "center">
+
+ <img src="https://github.com/audacity07/screeching-wax-837/blob/master/images/cw_pic1.PNG?raw=true" width="946" height="384" />
+ <img src="https://github.com/audacity07/screeching-wax-837/blob/master/images/cw_pic2.PNG?raw=true" width="942" height="446"/>
+ <img src="https://github.com/audacity07/screeching-wax-837/blob/master/images/cw_pic3.PNG?raw=true" width="942" height="478"/>
+ <img src="https://github.com/audacity07/screeching-wax-837/blob/master/images/cw_pic4.PNG?raw=true" width="942" height="474"/>
+ <img src="https://github.com/audacity07/screeching-wax-837/blob/master/images/cw_pic5.PNG?raw=true" width="942" height="480"/>
+  
+<div/>
+
+| `Demo` |
+| :----: |
+
+[https://sparkly-sunburst-89c64a.netlify.app/](https://sparkly-sunburst-89c64a.netlify.app/)
+
+| `Authors` |
+| :-------: |
+
+[@audacity07](https://github.com/audacity07)
