@@ -1,4 +1,4 @@
-# screeching-wax-837
+# Modern School
 
 <div align="center"  width="55" height="55">
   <img src="https://github.com/audacity07/screeching-wax-837/blob/master/images/u2cw_blacklogo_noName.png?raw=true" alt="html" width="120" height="120"/>
